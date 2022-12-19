@@ -13,7 +13,6 @@ pipeline {
             docker image build -t saleor:1.0 .
             docker container run -d saleor:1.0 
             docker tag saleor:1.0 maheshryali/newimage:1.0
-            cat ~/file.txt | docker login --username maheshryali --password-stdin
             docker push maheshryali/newimage:1.0
             """
             }
